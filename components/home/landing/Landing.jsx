@@ -4,15 +4,13 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  FlatList,
 } from "react-native";
 import { useRouter } from "expo-router";
 
 import styles from "./Landing.style";
+import LaunchesList from "../list/LaunchesList";
 
-const launchTypes = ["Satellite", "Spaceship", "ISS"];
-
-const Landing = ({ searchTerm, setSearchTerm, handleClick }) => {
+function Landing () {
   const router = useRouter();
   // Add styles
   return (
@@ -41,22 +39,7 @@ const Landing = ({ searchTerm, setSearchTerm, handleClick }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.tabsContainer}>
-        <FlatList
-          data={launchTypes}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-                // TODO: on press that routes to launch details page
-              
-            >
-              <Text>{item}</Text>
-            </TouchableOpacity>
-          )}
-          keyExtractor={(item) => item}
-          contentContainerStyle={{ columnGap: SIZES.small }}
-          horizontal
-        />
-      </View>
+     <LaunchesList value={value} /> 
     </View>
   );
 };
