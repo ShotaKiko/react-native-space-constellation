@@ -7,6 +7,6 @@ describe('Landing page', () => {
   it('has 1 child', () => {
     const tree = renderer.create(<Landing />).toJSON();
     console.log(tree.children.length)
-    expect(tree.children.length).toBe(true);
+    expect(tree.children.length).toBe(3);
   });
 });
