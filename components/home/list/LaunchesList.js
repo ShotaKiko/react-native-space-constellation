@@ -4,13 +4,11 @@ import {
     TouchableOpacity,
     FlatList,
   } from "react-native";
-  import { useRouter } from "expo-router";
   
-  import styles from "./Landing.style";
+  import styles from "./LaunchesList.style";
   
   
   function LaunchesList(list) {
-    const router = useRouter();
     return (
         <View style={styles.container}>
         {/* TODO: Is flat list more appropriate here than mapping */}

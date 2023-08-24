@@ -5,13 +5,11 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { useRouter } from "expo-router";
 
 import styles from "./Landing.style";
 import LaunchesList from "../list/LaunchesList";
 
 function Landing () {
-  const router = useRouter();
   // Add styles
   return (
     <View>
@@ -24,22 +22,23 @@ function Landing () {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value={searchTerm}
+            value={""}
             onChangeText={(text) => setSearchTerm(text)}
             placeholder='What are you looking for?'
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
-          <Image
+        <TouchableOpacity style={styles.searchBtn}>
+          {/* TODO: of corresponding image */}
+          {/* <Image
             source={icons.search}
             resizeMode='contain'
             style={styles.searchBtnImage}
-          />
+          /> */}
         </TouchableOpacity>
       </View>
-
-     <LaunchesList value={value} /> 
+          
+     <LaunchesList /> 
     </View>
   );
 };
