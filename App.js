@@ -1,12 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, ImageBackground } from 'react-native';
+import { ApolloClient, InMemoryCache, ApolloProvider, gql, useQuery } from '@apollo/client';
+import Landing from './components/home/landing/Landing';
+
+
+const client = new ApolloClient({
+  uri: 'https://main--spacex-l4uc6p.apollographos.net/graphql',
+  cache: new InMemoryCache(),
+});
+
+// const GET_LOCATIONS = gql`
+//   query Launches {
+//   launches {
+//     id
+//     details
+//     mission_name
+//     rocket {
+//       rocket_name
+//       rocket_type
+//     }
+//   }
+//   payloads {
+//     payload_mass_kg
+//     payload_mass_lbs
+//   }
+// }
+// `;
+
+// const { loading, error, data } = useQuery(GET_LOCATIONS);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ApolloProvider client={client}>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <Landing/>
+      </View>
+  </ApolloProvider>
   );
 }
 
@@ -16,5 +46,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    border:"1px solid green",
   },
 });

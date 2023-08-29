@@ -6,6 +6,7 @@ import {
   } from "react-native";
   
   import styles from "./LaunchesList.style";
+import LaunchCard from "../details/LaunchCard";
   
   
   function LaunchesList(list) {
@@ -19,7 +20,7 @@ import {
                 // TODO: on press that routes to launch details page
               
             >
-              <Text>{item}</Text>
+              <LaunchCard props={item}>{item}</LaunchCard>
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item}

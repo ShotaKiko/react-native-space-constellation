@@ -8,14 +8,22 @@ import {
 
 import styles from "./Landing.style";
 import LaunchesList from "../list/LaunchesList";
+import { ImageBackground } from "react-native";
+
+import background from "../../../assets/background.jpeg"
 
 function Landing () {
   // Add styles
   return (
-    <View>
-      <View style={styles.container}>
-        <Text>Hello fellow space enthusiast</Text>
-        <Text>Explore past launches into space</Text>
+    <View style={styles.container}>
+      <View style={styles.bannerStrip}>
+      <ImageBackground
+          source={background}
+          style={{flex:1}}
+        > 
+        <Text style={styles.bannerTitle}>SpaceX Launches</Text>
+        <Text style={styles.bannerText}>Explore past launches into space</Text>
+        </ImageBackground>
       </View>
 
       <View style={styles.searchContainer}>
@@ -37,7 +45,7 @@ function Landing () {
           /> */}
         </TouchableOpacity>
       </View>
-          
+
      <LaunchesList /> 
     </View>
   );
