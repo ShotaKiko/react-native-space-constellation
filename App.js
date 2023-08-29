@@ -9,25 +9,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// const GET_LOCATIONS = gql`
-//   query Launches {
-//   launches {
-//     id
-//     details
-//     mission_name
-//     rocket {
-//       rocket_name
-//       rocket_type
-//     }
-//   }
-//   payloads {
-//     payload_mass_kg
-//     payload_mass_lbs
-//   }
-// }
-// `;
-
-// const { loading, error, data } = useQuery(GET_LOCATIONS);
 
 export default function App() {
   return (
@@ -46,6 +27,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    border:"1px solid green",
   },
 });
