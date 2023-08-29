@@ -3,12 +3,16 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     width: "100%",
+    border: "1px solid blue",
+    display:"flex",
+    justifyContent:"space-evenly"
   },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     height: 50,
+    border: "1px solid red",
   },
   searchWrapper: {
     flex: 1,
@@ -32,6 +36,17 @@ const styles = StyleSheet.create({
   },
   tabsContainer: {
     width: "100%",
+  },
+  bannerStrip: {
+    width:"100%",
+    display: "flex",
+  },
+  bannerTitle: {
+    color:"#fff",
+    fontSize: "2em",
+  },
+  bannerText: {
+    color:"#fff"
   },
 });
 
