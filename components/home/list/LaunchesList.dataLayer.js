@@ -9,6 +9,7 @@ const GET_LAUNCHES = gql`
   query Launches {
     launches {
       id
+      details
       mission_name
     }
   }
@@ -37,7 +38,6 @@ function LaunchesListDataLayer() {
           </View>
       ) 
     } else if (data) {
-        console.log("BIG SUCCESS")
         console.log(data)
         // TODO: Add validation lodash - get function
         return (

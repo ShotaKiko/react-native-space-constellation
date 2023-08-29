@@ -1,6 +1,5 @@
 import {
     View,
-    Text,
     TouchableOpacity,
     FlatList,
   } from "react-native";
@@ -25,7 +24,6 @@ import LaunchCard from "../details/LaunchCard";
           )}
           keyExtractor={(item) => item}
           // TODO: Define this in constants so there are no random values
-          contentContainerStyle={{ columnGap: .5 }}
           horizontal
         />
         </View>
