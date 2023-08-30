@@ -5,9 +5,11 @@ import {
   } from "react-native";
 import LaunchesList from './LaunchesList';
 
+const launchesLimit = 20;
+
 const GET_LAUNCHES = gql`
   query Launches {
-    launches {
+    launches(limit: ${launchesLimit}) {
       id
       details
       mission_name
