@@ -3,14 +3,13 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Image,
 } from "react-native";
 
 import styles from "./Landing.style";
-import LaunchesList from "../list/LaunchesList";
 import { ImageBackground } from "react-native";
 
 import background from "../../../assets/background.jpeg"
+import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 
 function Landing () {
   // Add styles
@@ -19,7 +18,7 @@ function Landing () {
       <View style={styles.bannerStrip}>
       <ImageBackground
           source={background}
-          style={{flex:1}}
+          style={styles.background}
         > 
         <Text style={styles.bannerTitle}>SpaceX Launches</Text>
         <Text style={styles.bannerText}>Explore past launches into space</Text>
@@ -46,7 +45,7 @@ function Landing () {
         </TouchableOpacity>
       </View>
 
-     <LaunchesList /> 
+     <LaunchesListDataLayer />
     </View>
   );
 };

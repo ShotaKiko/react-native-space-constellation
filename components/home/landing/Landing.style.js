@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
   tabsContainer: {
     width: "100%",
   },
+  background: {
+    flex: 1,
+  },
   bannerStrip: {
     width:"100%",
     display: "flex",
