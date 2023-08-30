@@ -9,7 +9,7 @@ import styles from "./Landing.style";
 import { ImageBackground } from "react-native";
 
 import background from "../../../assets/background.jpeg"
-import LaunchesListDataLayer from "../list/LaunchesList.dataLayer";
+import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 
 function Landing () {
   // Add styles

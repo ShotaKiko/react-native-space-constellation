@@ -27,7 +27,8 @@ function LaunchesListDataLayer() {
                 </Text>
             </View>
         )
-    } else if (error) {
+    } 
+    if (error) {
       console.log(error)
         return(
           // TODO: Error banner/ pop over
@@ -37,7 +38,8 @@ function LaunchesListDataLayer() {
               </Text>
           </View>
       ) 
-    } else if (data) {
+    }
+    if (data) {
         console.log(data)
         // TODO: Add validation lodash - get function
         return (
