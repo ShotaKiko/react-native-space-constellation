@@ -23,7 +23,7 @@ function LaunchesListDataLayer() {
     if (loading) {
         return(
           // TODO: Spinner
-            <View>
+            <View> 
                 <Text>
                     Loading...
                 </Text>

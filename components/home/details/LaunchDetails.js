@@ -12,6 +12,8 @@ function LaunchDetails({ navigation, props })  {
 
         <Button
             title="Back to Home"
+            // TODO: move on press logic to utils file
+            // generateOnPress
             onPress={() => navigation.navigate('Home')}
         />
       </View>

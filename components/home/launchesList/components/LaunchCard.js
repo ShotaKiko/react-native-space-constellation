@@ -9,6 +9,7 @@ function LaunchCard({ props, navigation})  {
 
         <Button  
           title="Go to Details"
+          // TODO: move on press logic to a utils file
           onPress={() => navigation.navigate('Details')}
         />
       </View>
