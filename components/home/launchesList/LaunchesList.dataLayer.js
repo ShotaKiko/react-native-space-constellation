@@ -5,9 +5,11 @@ import {
   } from "react-native";
 import LaunchesList from './LaunchesList';
 
+const launchesLimit = 20;
+
 const GET_LAUNCHES = gql`
   query Launches {
-    launches {
+    launches(limit: ${launchesLimit}) {
       id
       details
       mission_name
@@ -21,7 +23,7 @@ function LaunchesListDataLayer() {
     if (loading) {
         return(
           // TODO: Spinner
-            <View>
+            <View> 
                 <Text>
                     Loading...
                 </Text>

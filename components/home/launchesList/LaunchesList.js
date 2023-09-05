@@ -5,7 +5,7 @@ import {
   } from "react-native";
   
   import styles from "./LaunchesList.style";
-import LaunchCard from "../details/LaunchCard";
+import LaunchCard from "./components/LaunchCard";
   
   
   function LaunchesList(list) {

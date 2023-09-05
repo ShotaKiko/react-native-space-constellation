@@ -1,7 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ImageBackground } from 'react-native';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql, useQuery } from '@apollo/client';
+import { StyleSheet } from 'react-native';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
 import Landing from './components/home/landing/Landing';
+import LaunchDetails from './components/home/details/LaunchDetails';
 
 
 const client = new ApolloClient({
@@ -9,14 +13,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <View style={styles.container}>
-        <StatusBar style="auto" />
-        <Landing/>
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={Landing} options={{ title: 'Recent Launches' }} />
+          <Stack.Screen name="Details" component={LaunchDetails} />
+        </Stack.Navigator>
+      </NavigationContainer>
   </ApolloProvider>
   );
 }
