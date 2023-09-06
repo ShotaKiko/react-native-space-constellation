@@ -48,6 +48,7 @@ function Landing() {
 
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
+          <SearchIcon />
           <TextInput
             style={styles.searchInput}
             value={searchInput}

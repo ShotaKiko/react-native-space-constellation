@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
-import { View, Text } from "react-native";
+import ErrorIcon from "@mui/icons-material/Error";
+import { View, Text, ActivityIndicator } from "react-native";
 
 import LaunchesList from "./LaunchesList";
 
@@ -24,17 +25,16 @@ function LaunchesListDataLayer() {
 
   if (loading) {
     return (
-      // TODO: Spinner
       <View>
-        <Text>Loading...</Text>
+        <ActivityIndicator size="large" />
       </View>
     );
   }
   if (error) {
     console.log(error);
     return (
-      // TODO: Error banner/ pop over
       <View>
+        <ErrorIcon />
         <Text>Error retrieving data</Text>
       </View>
     );
