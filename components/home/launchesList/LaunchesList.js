@@ -1,32 +1,27 @@
 import {
     View,
+    SafeAreaView,
     TouchableOpacity,
     FlatList,
   } from "react-native";
   
-  import styles from "./LaunchesList.style";
+import styles from "./LaunchesList.style";
 import LaunchCard from "./components/LaunchCard";
   
   
-  function LaunchesList(list) {
+function LaunchesList(props) {
     return (
-        <View style={styles.container}>
-        {/* TODO: Is flat list more appropriate here than mapping */}
+        <SafeAreaView style={styles.container}>
         <FlatList
-          data={list}
+        // Flatten obj here to avoid double call?
+          data={props.launches.launches}
           renderItem={({ item }) => (
-            <TouchableOpacity
-                // TODO: on press that routes to launch details page
-              
-            >
-              <LaunchCard props={item}>{item}</LaunchCard>
-            </TouchableOpacity>
+            <LaunchCard props={item}/>
           )}
-          keyExtractor={(item) => item}
-          // TODO: Define this in constants so there are no random values
+          keyExtractor={(item) => item.id}
           horizontal
         />
-        </View>
+        </SafeAreaView>
     );
   };
   

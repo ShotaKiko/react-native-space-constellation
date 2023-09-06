@@ -1,12 +1,12 @@
-import {View, Button } from 'react-native';
+import {View, Button, Text } from 'react-native';
 
 import styles from "./LaunchCard.style";
 
-function LaunchCard({ props, navigation})  {
+function LaunchCard({ props })  {
     return (
       <View style={styles.card}>
-        <View style={styles.cardContent}>{props.children}</View>
-
+        <Text>{props.mission_name}</Text>
+        <Text>{props.details}</Text>
         <Button  
           title="Go to Details"
           // TODO: move on press logic to a utils file

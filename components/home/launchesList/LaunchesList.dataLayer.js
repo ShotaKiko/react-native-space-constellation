@@ -42,12 +42,11 @@ function LaunchesListDataLayer() {
       ) 
     }
     if (data) {
-        console.log(data)
         // TODO: Add validation lodash - get function
         return (
           <View>
             <Text>Recent Launches</Text>
-            <LaunchesList list={data} />
+            <LaunchesList launches={ data } />
           </View>
         )
     }
