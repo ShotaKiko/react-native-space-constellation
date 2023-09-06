@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 
-
 const styles = StyleSheet.create({
   card: {
     borderRadius: 6,
@@ -12,7 +11,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: 6,
-    
   },
   cardContent: {
     marginHorizontal: 18,
@@ -21,7 +19,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 16,
     fontWeight: "bold",
-  }
-  });
+  },
+});
 
 export default styles;

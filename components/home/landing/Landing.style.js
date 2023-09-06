@@ -2,12 +2,10 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    display:"flex",
     flex: 1,
   },
   searchContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 1,
   },
   searchWrapper: {
     height: "100%",
@@ -30,20 +28,19 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   background: {
-    flex: 2
+    flex: 2,
   },
-  bannerStrip: {
-  },
+  bannerStrip: {},
   bannerTitle: {
-    color:"#fff",
+    color: "#fff",
     fontSize: "2em",
   },
   bannerText: {
-    color:"#fff"
+    color: "#fff",
   },
   listContent: {
     flex: 3,
-  }
+  },
 });
 
 export default styles;
