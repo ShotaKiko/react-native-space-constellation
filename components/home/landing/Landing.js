@@ -5,6 +5,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import { useState } from "react";
+
 import styles from "./Landing.style";
 import { ImageBackground } from "react-native";
 
@@ -12,6 +14,12 @@ import background from "../../../assets/background.jpeg"
 import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 
 function Landing () {
+  const [searchInput, setSearchInput] = useState("");
+
+  function SearchInputHandler(searchText) {
+    setSearchInput(searchText)
+  }
+
   // Add styles
   return (
     <View style={styles.container}>
@@ -29,8 +37,8 @@ function Landing () {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value={""}
-            onChangeText={(text) => setSearchTerm(text)}
+            value={searchInput}
+            onChangeText={(text) => SearchInputHandler(text)}
             placeholder='What are you looking for?'
           />
         </View>
