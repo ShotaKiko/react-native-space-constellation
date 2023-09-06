@@ -2,14 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    border: "5px solid blue",
     display:"flex",
     flex: 1,
   },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",
-    border: "1px solid red",
   },
   searchWrapper: {
     height: "100%",
