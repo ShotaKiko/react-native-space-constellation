@@ -13,6 +13,10 @@ const GET_LAUNCHES = gql`
       id
       details
       mission_name
+      rocket {
+        rocket_name
+        rocket_type
+      }
     }
   }
 `;
