@@ -16,9 +16,22 @@ import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 function Landing () {
   const [searchInput, setSearchInput] = useState("");
 
-  function SearchInputHandler(searchText) {
-    setSearchInput(searchText)
+function SearchInputHandler(searchText) {
+  setSearchInput(searchText)
+}
+
+const searchFilterFunction = (text) => {
+  if(text){  
+      const newData = data.filter(item => {
+          const itemData = item.name.first ? item.name.first.toUpperCase() : ''.toUpperCase();
+          const textData = text.toUpperCase();
+          return itemData.indexOf(textData) > -1;
+      })
+      setFilteredData(newData);
+  } else {
+      setFilteredData(data);
   }
+}
 
   // Add styles
   return (
