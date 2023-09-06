@@ -45,7 +45,7 @@ function Landing () {
         </TouchableOpacity>
       </View>
 
-     <LaunchesListDataLayer />
+     <LaunchesListDataLayer style={styles.listContent} />
     </View>
   );
 };

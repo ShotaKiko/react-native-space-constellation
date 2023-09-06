@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
     marginVertical: 20,
   },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+  }
   });
 
 export default styles;

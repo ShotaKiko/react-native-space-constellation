@@ -49,7 +49,6 @@ function LaunchesListDataLayer() {
         // TODO: Add validation lodash - get function
         return (
           <View>
-            <Text>Recent Launches</Text>
             <LaunchesList launches={ data } />
           </View>
         )
