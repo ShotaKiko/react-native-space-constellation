@@ -1,33 +1,26 @@
-import {
-    View,
-    TouchableOpacity,
-    FlatList,
-  } from "react-native";
-  
-  import styles from "./LaunchesList.style";
+import { View, FlatList } from "react-native";
+
+import styles from "./LaunchesList.style";
 import LaunchCard from "./components/LaunchCard";
-  
-  
-  function LaunchesList(list) {
-    return (
-        <View style={styles.container}>
-        {/* TODO: Is flat list more appropriate here than mapping */}
-        <FlatList
-          data={list}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-                // TODO: on press that routes to launch details page
-              
-            >
-              <LaunchCard props={item}>{item}</LaunchCard>
-            </TouchableOpacity>
-          )}
-          keyExtractor={(item) => item}
-          // TODO: Define this in constants so there are no random values
-          horizontal
-        />
-        </View>
-    );
-  };
-  
-  export default LaunchesList;
+
+const logo = {
+  uri: "https://reactnative.dev/img/tiny_logo.png",
+  width: 64,
+  height: 64,
+};
+
+function LaunchesList(props) {
+  return (
+    <View style={styles.container} horizontal={false}>
+      <FlatList
+        // Flatten obj here to avoid double?
+        data={props.launches.launches}
+        renderItem={({ item }) => <LaunchCard props={item} />}
+        keyExtractor={(item) => item.id}
+        horizontal
+      />
+    </View>
+  );
+}
+
+export default LaunchesList;

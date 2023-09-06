@@ -2,22 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    border: "1px solid blue",
-    display:"flex",
-    justifyContent:"space-evenly"
+    flex: 1,
   },
   searchContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    height: 50,
-    border: "1px solid red",
+    flex: 1,
   },
   searchWrapper: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     height: "100%",
   },
   searchInput: {
@@ -38,18 +28,18 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   background: {
-    flex: 1,
+    flex: 2,
   },
-  bannerStrip: {
-    width:"100%",
-    display: "flex",
-  },
+  bannerStrip: {},
   bannerTitle: {
-    color:"#fff",
+    color: "#fff",
     fontSize: "2em",
   },
   bannerText: {
-    color:"#fff"
+    color: "#fff",
+  },
+  listContent: {
+    flex: 3,
   },
 });
 

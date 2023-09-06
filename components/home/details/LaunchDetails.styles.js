@@ -10,6 +10,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
     marginVertical: 20,
   },
-  });
+});
 
 export default styles;
