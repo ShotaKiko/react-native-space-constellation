@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  card: {
+  cardContainer: {
     borderRadius: 6,
-    elevation: 3,
+    elevation: 5,
     backgroundColor: "#fff",
     shadowOffset: { width: 1, height: 1 },
     shadowColor: "#333",
@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: 6,
+    width: "20%",
+    justifyContent: "center",
+    alignItems: "center",
   },
   cardContent: {
     marginHorizontal: 18,
@@ -19,6 +22,13 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 16,
     fontWeight: "bold",
+  },
+  cardButton: {
+    width: "30%",
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10,
+    borderRadius: 5,
   },
 });
 

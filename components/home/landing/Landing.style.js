@@ -2,17 +2,20 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    border: "5px solid green",
     flex: 1,
   },
   searchContainer: {
-    flex: 1,
+    border: "2px solid orange",
   },
   searchWrapper: {
-    height: "100%",
+    display: "flex",
+    flexDirection: "row",
   },
   searchInput: {
-    width: "100%",
+    width: "80%",
     height: "100%",
+    padding: 5,
   },
   searchBtn: {
     width: 50,
@@ -33,13 +36,10 @@ const styles = StyleSheet.create({
   bannerStrip: {},
   bannerTitle: {
     color: "#fff",
-    fontSize: "2em",
+    fontSize: 18,
   },
   bannerText: {
     color: "#fff",
-  },
-  listContent: {
-    flex: 3,
   },
 });
 
