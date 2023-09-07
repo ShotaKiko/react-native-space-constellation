@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { View, FlatList, TextInput } from "react-native";
 
 import styles from "./LaunchesList.style";
-import LaunchCard from "./components/LaunchCard";
+import LaunchCard from "../launchCard/LaunchCard";
 
 function LaunchesList({ launches }) {
   const [searchInput, setSearchInput] = useState("");
