@@ -12,8 +12,7 @@ import searchFilterFunction from "./Landing.utils";
 import background from "../../../assets/background.jpeg";
 import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 
-function Landing({ navigation }) {
-  console.log("LANDING", navigation);
+function Landing() {
   const [searchInput, setSearchInput] = useState("");
   // TODO: Update flatlist with this value
   const [filteredData, setFilteredData] = useState("");
@@ -57,7 +56,7 @@ function Landing({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <LaunchesListDataLayer navigation={navigation} />
+      <LaunchesListDataLayer />
     </View>
   );
 }

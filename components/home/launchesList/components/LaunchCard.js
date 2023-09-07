@@ -1,9 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
 import { View, TouchableOpacity, Text } from "react-native";
 
 import styles from "./LaunchCard.style";
 
-function LaunchCard({ item, navigation }) {
-  console.log("CARD", navigation, item);
+function LaunchCard({ item }) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.cardContainer}>
       <Text style={styles.cardTitle}>{item.mission_name}</Text>

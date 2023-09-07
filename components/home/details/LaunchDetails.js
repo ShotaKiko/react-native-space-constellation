@@ -4,7 +4,6 @@ import styles from "./LaunchDetails.styles";
 
 function LaunchDetails({ route, navigation }) {
   const item = route.params;
-  console.log(item);
   return (
     <View style={styles.container}>
       <Text>{item.mission_name}</Text>
