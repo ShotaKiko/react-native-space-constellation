@@ -19,7 +19,8 @@ const GET_LAUNCHES = gql`
   }
 `;
 
-function LaunchesListDataLayer() {
+function LaunchesListDataLayer({ navigation }) {
+  console.log("DATALAYER", navigation);
   const { loading, error, data } = useQuery(GET_LAUNCHES);
 
   if (loading) {
@@ -39,7 +40,7 @@ function LaunchesListDataLayer() {
   }
   if (data) {
     // TODO: Add validation lodash - get function
-    return <LaunchesList launches={data} />;
+    return <LaunchesList launches={data} navigation={navigation} />;
   }
 }
 

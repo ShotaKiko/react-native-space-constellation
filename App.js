@@ -16,9 +16,9 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="List">
           <Stack.Screen
-            name="Home"
+            name="List"
             component={Landing}
             options={{ title: "Recent Launches" }}
           />
