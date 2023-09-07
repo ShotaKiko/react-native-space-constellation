@@ -36,26 +36,6 @@ function Landing() {
         </ImageBackground>
       </View>
 
-      <View style={styles.searchContainer}>
-        <View style={styles.searchWrapper}>
-          <TextInput
-            style={styles.searchInput}
-            value={searchInput}
-            onChangeText={(text) => SearchInputHandler(text)}
-            placeholder="Search for a specific SpaceX launch"
-          />
-        </View>
-
-        <TouchableOpacity style={styles.searchBtn}>
-          {/* TODO: of corresponding image */}
-          {/* <Image
-            source={icons.search}
-            resizeMode="contain"
-            style={styles.searchBtnImage}
-          /> */}
-        </TouchableOpacity>
-      </View>
-
       <LaunchesListDataLayer />
     </View>
   );

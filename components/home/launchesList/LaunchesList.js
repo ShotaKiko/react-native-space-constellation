@@ -1,14 +1,54 @@
-import { View, FlatList } from "react-native";
+import filter from "lodash.filter";
+import { useState, useEffect } from "react";
+import { View, FlatList, TextInput } from "react-native";
 
 import styles from "./LaunchesList.style";
 import LaunchCard from "./components/LaunchCard";
 
 function LaunchesList({ launches }) {
+  const [searchInput, setSearchInput] = useState("");
+  const [fullData, setFullData] = useState({});
+  const [data, setData] = useState({});
+
+  function handleSearch(searchText) {
+    setSearchInput(searchText);
+    //modify list
+    const formattedQuery = searchText.toLowerCase();
+    console.log("Formatted query", formattedQuery);
+    const filteredData = filter(fullData, (launch) => {
+      return contains(launch, formattedQuery);
+    });
+    console.log("FILTERED", filteredData);
+    setData(filteredData);
+  }
+
+  const contains = ({ mission_name }, query) => {
+    console.log("MISSIONNAMe: ", mission_name.toLowerCase(), "QUERY: ", query);
+    if (mission_name.toLowerCase().includes(query)) {
+      console.log("Y");
+      return true;
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    setData(launches.launches);
+    setFullData(launches.launches);
+  }, []);
+
   return (
     <View style={styles.container}>
+      <View style={styles.searchContainer}>
+        <TextInput
+          style={styles.searchInput}
+          value={searchInput}
+          onChangeText={(text) => handleSearch(text)}
+          placeholder="Search for a specific SpaceX launch"
+        />
+      </View>
       <FlatList
         contentContainerStyle={styles.list}
-        data={launches.launches}
+        data={data}
         renderItem={({ item }) => <LaunchCard item={item} />}
         keyExtractor={(item) => item.id}
       />

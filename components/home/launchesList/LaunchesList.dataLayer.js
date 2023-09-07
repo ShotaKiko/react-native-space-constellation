@@ -2,6 +2,7 @@ import { useQuery, gql } from "@apollo/client";
 import { View, Text, ActivityIndicator } from "react-native";
 
 import LaunchesList from "./LaunchesList";
+import styles from "./LaunchesList.style";
 
 const launchesLimit = 20;
 
@@ -24,7 +25,7 @@ function LaunchesListDataLayer() {
 
   if (loading) {
     return (
-      <View>
+      <View style={styles.loading}>
         <ActivityIndicator size="large" />
       </View>
     );
