@@ -1,5 +1,4 @@
 import { useQuery, gql } from "@apollo/client";
-import ErrorIcon from "@mui/icons-material/Error";
 import { View, Text, ActivityIndicator } from "react-native";
 
 import LaunchesList from "./LaunchesList";
@@ -34,7 +33,6 @@ function LaunchesListDataLayer() {
     console.log(error);
     return (
       <View>
-        <ErrorIcon />
         <Text>Error retrieving data</Text>
       </View>
     );
