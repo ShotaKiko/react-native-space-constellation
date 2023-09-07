@@ -14,18 +14,17 @@ function LaunchesList({ launches }) {
     setSearchInput(searchText);
     //modify list
     const formattedQuery = searchText.toLowerCase();
-    console.log("Formatted query", formattedQuery);
     const filteredData = filter(fullData, (launch) => {
       return contains(launch, formattedQuery);
     });
-    console.log("FILTERED", filteredData);
     setData(filteredData);
   }
 
-  const contains = ({ mission_name }, query) => {
-    console.log("MISSIONNAMe: ", mission_name.toLowerCase(), "QUERY: ", query);
-    if (mission_name.toLowerCase().includes(query)) {
-      console.log("Y");
+  const contains = ({ mission_name, rocket }, query) => {
+    if (
+      mission_name.toLowerCase().includes(query) ||
+      rocket.rocket_name.toLowerCase().includes(query)
+    ) {
       return true;
     }
     return false;
@@ -44,6 +43,7 @@ function LaunchesList({ launches }) {
           value={searchInput}
           onChangeText={(text) => handleSearch(text)}
           placeholder="Search for a specific SpaceX launch"
+          placeholderTextColor="#ccc"
         />
       </View>
       <FlatList
