@@ -36,13 +36,10 @@ const styles = StyleSheet.create({
   bannerStrip: {},
   bannerTitle: {
     color: "#fff",
-    fontSize: "2em",
+    fontSize: 18,
   },
   bannerText: {
     color: "#fff",
-  },
-  listContent: {
-    flex: 3,
   },
 });
 

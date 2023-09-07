@@ -5,13 +5,13 @@ import LaunchCard from "./components/LaunchCard";
 
 function LaunchesList(props) {
   return (
-    <View style={styles.container} horizontal={false}>
+    <View style={styles.container}>
       <FlatList
+        contentContainerStyle={styles.list}
         // Flatten obj here to avoid double?
         data={props.launches.launches}
         renderItem={({ item }) => <LaunchCard props={item} />}
         keyExtractor={(item) => item.id}
-        horizontal
       />
     </View>
   );
