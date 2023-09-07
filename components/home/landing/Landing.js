@@ -1,4 +1,3 @@
-import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import {
   View,
@@ -9,32 +8,23 @@ import {
 } from "react-native";
 
 import styles from "./Landing.style";
+import searchFilterFunction from "./Landing.utils";
 import background from "../../../assets/background.jpeg";
 import LaunchesListDataLayer from "../launchesList/LaunchesList.dataLayer";
 
 function Landing() {
   const [searchInput, setSearchInput] = useState("");
+  // TODO: Update flatlist with this value
+  const [filteredData, setFilteredData] = useState("");
+
+  function onSubmitSearch(text, data) {
+    setFilteredData(searchFilterFunction(text, data));
+  }
 
   function SearchInputHandler(searchText) {
     setSearchInput(searchText);
   }
 
-  // const searchFilterFunction = (text) => {
-  //   if (text) {
-  //     const newData = data.filter((item) => {
-  //       const itemData = item.name.first
-  //         ? item.name.first.toUpperCase()
-  //         : "".toUpperCase();
-  //       const textData = text.toUpperCase();
-  //       return itemData.indexOf(textData) > -1;
-  //     });
-  //     setFilteredData(newData);
-  //   } else {
-  //     setFilteredData(data);
-  //   }
-  // };
-
-  // Add styles
   return (
     <View style={styles.container}>
       <View style={styles.bannerStrip}>
@@ -48,7 +38,6 @@ function Landing() {
 
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
-          <SearchIcon />
           <TextInput
             style={styles.searchInput}
             value={searchInput}
@@ -67,7 +56,7 @@ function Landing() {
         </TouchableOpacity>
       </View>
 
-      <LaunchesListDataLayer style={styles.listContent} />
+      <LaunchesListDataLayer />
     </View>
   );
 }
