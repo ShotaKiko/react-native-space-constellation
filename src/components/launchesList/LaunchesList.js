@@ -1,6 +1,6 @@
 import filter from "lodash.filter";
 import { useState, useEffect } from "react";
-import { View, FlatList, TextInput } from "react-native";
+import { View, FlatList, TextInput, Text } from "react-native";
 
 import styles from "./LaunchesList.style";
 import LaunchCard from "../launchCard/LaunchCard";

@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    justifyContent: "center",
+  },
   searchContainer: {
-    // border: "2px solid orange",
     marginHorizontal: 20,
     marginVertical: 10,
   },
@@ -15,7 +17,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   list: {
-    elevation: 5,
+    flexGrow: 1,
+    alignItems: "center",
   },
   loading: {
     flex: 20,

@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: 6,
-    width: "20%",
+    width: 350,
+    height: "fitContent",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 16,
     fontWeight: "bold",
+    marginVertical: 20,
   },
   cardButton: {
     width: "30%",
@@ -29,6 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#DDDDDD",
     padding: 10,
     borderRadius: 5,
+    marginBottom: 10,
   },
 });
 
