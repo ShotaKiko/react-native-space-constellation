@@ -4,20 +4,34 @@ const styles = StyleSheet.create({
   container: {
     // border: "5px solid green",
     flex: 1,
-    alignItems: "center",
   },
   background: {
-    flex: 2,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   bannerTitle: {
-    color: "#fff",
-    fontSize: 18,
+    color: "white",
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: "bold",
+    textAlign: "center",
   },
   bannerText: {
     color: "#fff",
   },
   buttonContainer: {
-    border: "1px solid pink",
+    marginVertical: 10,
+    width: "10%",
+    borderColor: "#ccc",
+    borderWidth: 2,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    height: 40,
+  },
+  buttonText: {
+    color: "white",
   },
 });
 

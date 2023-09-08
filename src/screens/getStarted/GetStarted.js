@@ -1,19 +1,31 @@
-import { View, ImageBackground, Text, Button } from "react-native-web";
+import {
+  View,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+} from "react-native-web";
 
 import styles from "./GetStarted.styles";
-import background from "../../../assets/background.jpeg";
+import background from "../../../assets/doge.gif";
 
 function GetStarted({ navigation }) {
   return (
     <View style={styles.container}>
-      <ImageBackground source={background} style={styles.background}>
+      <ImageBackground
+        source={background}
+        style={styles.background}
+        resizeMode="cover"
+      >
         <Text style={styles.bannerTitle}>SpaceX Launches</Text>
         <Text style={styles.bannerText}>Explore past launches into space</Text>
-      </ImageBackground>
 
-      <View style={styles.buttonContainer}>
-        <Button title="Get Started" onPress={() => navigation.push("List")} />
-      </View>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => navigation.push("List")}
+        >
+          <Text style={styles.buttonText}>Get Started</Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }
