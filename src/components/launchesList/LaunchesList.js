@@ -1,6 +1,7 @@
+import { LinearGradient } from "expo-linear-gradient";
 import filter from "lodash.filter";
 import { useState, useEffect } from "react";
-import { View, FlatList, TextInput, Text } from "react-native";
+import { View, FlatList, TextInput } from "react-native";
 
 import styles from "./LaunchesList.style";
 import LaunchCard from "../launchCard/LaunchCard";
@@ -37,6 +38,11 @@ function LaunchesList({ launches }) {
 
   return (
     <View style={styles.container}>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={["rgba(10,0,0,1)", "transparent"]}
+        style={styles.background}
+      />
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}

@@ -2,9 +2,8 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   cardContainer: {
-    borderRadius: 6,
-    elevation: 5,
-    backgroundColor: "#fff",
+    borderRadius: 4,
+    elevation: 10,
     shadowOffset: { width: 1, height: 1 },
     shadowColor: "#333",
     shadowOpacity: 0.3,
@@ -15,15 +14,21 @@ const styles = StyleSheet.create({
     height: "fitContent",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#091221",
   },
   cardContent: {
     marginHorizontal: 18,
     marginVertical: 20,
+    color: "#ccc",
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     marginVertical: 20,
+    color: "#ccc",
+    borderBottomColor: "#03050a",
+    paddingBottom: 3,
+    borderBottomWidth: 3,
   },
   cardButton: {
     width: "30%",
