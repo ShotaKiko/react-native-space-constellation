@@ -1,25 +1,27 @@
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, Image } from "react-native";
 
 import styles from "./LaunchDetails.styles";
+import falconRocketFamily from "../../../assets/falconFamily.png";
 
 function LaunchDetails({ route, navigation }) {
   const item = route.params;
   return (
     <View style={styles.container}>
-      <Text>{item.mission_name}</Text>
-      <Text>{item.details}</Text>
-      <Text>Additional Launch Information</Text>
       <View style={styles.content}>
-        <Text>Rocket details</Text>
-        <Text>{item.rocket.rocket_name}</Text>
-        <Text>{item.rocket.rocket_type}</Text>
+        <Text style={styles.mission}>Mission: {item.mission_name}</Text>
+        <Text style={styles.description}>Description: {item.details}</Text>
+        <Text style={styles.rocketName}>
+          Rocket Name: {item.rocket.rocket_name}
+        </Text>
+        <View>
+          <Image style={styles.image} source={falconRocketFamily} />
+        </View>
+
+        <Button
+          title="Back to List"
+          onPress={() => navigation.navigate("List")}
+        />
       </View>
-      <Button
-        title="Back to Home"
-        // TODO: move on press logic to utils file
-        // generateOnPress
-        onPress={() => navigation.navigate("List")}
-      />
     </View>
   );
 }

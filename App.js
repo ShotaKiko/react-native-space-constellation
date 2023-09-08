@@ -18,13 +18,42 @@ export default function App() {
     <ApolloProvider client={client}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={GetStarted} />
+          {/* // TODO: Look into using a stylesheet for these */}
+          <Stack.Screen
+            name="Home"
+            component={GetStarted}
+            options={{
+              headerStyle: {
+                backgroundColor: "#020208",
+              },
+              headerTintColor: "#ccc",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
           <Stack.Screen
             name="List"
             component={Landing}
-            options={{ title: "Recent Launches" }}
+            options={{
+              title: "Recent Launches",
+              headerStyle: {
+                backgroundColor: "black",
+              },
+              headerTintColor: "#ccc",
+            }}
           />
-          <Stack.Screen name="Details" component={LaunchDetails} />
+          <Stack.Screen
+            name="Details"
+            component={LaunchDetails}
+            options={{
+              title: "Recent Launches",
+              headerStyle: {
+                backgroundColor: "black",
+              },
+              headerTintColor: "#ccc",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </ApolloProvider>
