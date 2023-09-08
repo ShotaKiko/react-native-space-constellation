@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   image: {
     marginVertical: 20,
     //OG dimension: 2000×1253
-    // TODO: Look into how to preserve aspect ration as you scale up/down
+    // TODO: Look into how to preserve aspect ratio as you scale up/down
     width: 1000,
     height: 626.5,
   },
