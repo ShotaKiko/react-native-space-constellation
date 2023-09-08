@@ -2,11 +2,8 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  list: {
-    elevation: 5,
+    // border: "5px solid green",
+    flex: 1,
   },
 });
 
